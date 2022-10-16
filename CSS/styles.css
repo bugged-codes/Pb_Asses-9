@@ -4,6 +4,7 @@ body{
     background-image: url(../Assets/Images/Desert-Sahara.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 
     /* Top Left Camel Icon*/
@@ -11,7 +12,7 @@ body{
     display: inline-block;
     position: relative;
     margin: 1rem 1rem;
-    top: 1rem;
+    top: 1.5rem;
     left: 8rem;
     width: 3rem;
     height: 3rem;
@@ -28,14 +29,14 @@ body{
     width: 40%;
     height: 2rem;
     position: relative;
-    left: 55%;
+    left: 60%;
     top: -3rem;
-    display: flex;
+    /* display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: space-around;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: center; */
     color: white;
     font-size: 1em;
     font-weight: 700;
@@ -45,7 +46,24 @@ body{
 #div-navbar-parent a{
     text-decoration: none;
     color: white;
+    display: inline;
+    float: right;
 }
+
+    /* Flexing the Navbar UL */
+#div-navbar-parent ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+#div-navbar-parent li{
+    text-align: center;
+    display: inline;
+    margin: 0rem 1rem;
+}
+
+/*  */
 
     /* Hamberger Menu Icon */
 #menu-icon{ 
@@ -61,6 +79,12 @@ body{
     left: 15%;
     width: 40%;
     height: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: flex-start;
 
 }
     /* SAHARA Heading */
@@ -118,8 +142,13 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 15px;
-    transform: translate(o -5px);
 }
+
+/* Hovering Effect
+.div-cards:hover{
+    transform: translate(o -5px);
+} */
+
     /* 1st Card */
 #card1{
     background-image: url(../Assets/Images/Dessert-Small.png);
@@ -139,3 +168,66 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+/* Small text inside cards */
+.cards-text-small{
+    width: 60%;
+    font-size: 0.6em;
+    line-height: 2em;
+}
+
+/* Media Queries */
+
+    /* For Regular Laptop/Desktop Screens */
+    @media only screen and (max-width:1290px) and (min-width:851px){
+        #description-middle-parent{
+            position: relative;
+            top: 1rem;
+            width: 100%;
+        }
+        #div-cards-parent{
+            display: grid;
+            grid-template-columns: repeat(1,auto);
+            top: 1rem;
+            left: 35%;
+        }
+        .div-cards{
+            margin: 1rem;
+            width: 37rem;
+            height: 20rem;
+        }
+        #card4::before{
+            background-size: cover;
+            background-position: bottom;
+            background-repeat: no-repeat;
+        }
+        .cards-text-small{
+            width: 100%;
+            line-height: 0.5em;
+        }
+        #div-cards-parent h5{
+            font-size: 1.6em;
+        }
+    }
+
+    /* For wide tablet screens
+    @media only screen and (max-width:850px) and (min-width:600px){
+        #div-cards-parent{
+            display: grid;
+            grid-template-columns: repeat(1,auto);
+            top: 1rem;
+            left: 36%;
+        }
+        .div-cards{
+            margin: 1rem;
+            width: 50rem;
+            height: 20rem;
+        }
+        #div-navbar-parent ul{
+            display: block;
+        }
+        .box::before{
+            background-repeat:no-repeat;
+        }
+    
+    } */
