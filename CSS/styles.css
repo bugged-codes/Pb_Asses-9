@@ -63,8 +63,6 @@ body{
     margin: 0rem 1rem;
 }
 
-/*  */
-
     /* Hamberger Menu Icon */
 #menu-icon{ 
     /* Makkin it fit in menu line */
@@ -114,7 +112,6 @@ body{
     text-align: center;
     font-weight: 600;
     font-size: 0.8em;
-
 }
 
 /* Hovering Cards Parent div */
@@ -144,10 +141,9 @@ body{
     border-radius: 15px;
 }
 
-/* Hovering Effect
-.div-cards:hover{
-    transform: translate(o -5px);
-} */
+#div-cards-parent div:hover{
+    transform: translateY(-5px);
+}
 
     /* 1st Card */
 #card1{
