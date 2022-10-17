@@ -174,8 +174,13 @@ body{
 
 /* Media Queries */
 
-    /* For Regular Laptop/Desktop Screens */
-    @media only screen and (max-width:1290px) and (min-width:851px){
+    /* For Regular Laptop/Desktop/Tablet Screens */
+    @media only screen and (max-width:1190px) and (min-width:651px){
+        body{
+            background-repeat: repeat;
+            background-size: 100%;
+        }
+        
         #description-middle-parent{
             position: relative;
             top: 1rem;
@@ -206,24 +211,52 @@ body{
         }
     }
 
-    /* For wide tablet screens
-    @media only screen and (max-width:850px) and (min-width:600px){
+    /* For wide mobile/small screen screens */
+    @media only screen and (max-width:650px) and (min-width:300px){
+        body{
+            background-repeat: repeat;
+            background-size: 100%;
+        }
+        #div-navbar-parent{
+            position: relative;
+            left: 60%;
+            font-size: 1.5em;
+            top: 0rem;
+        }
+        #div-navbar-parent ul{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-content: center;
+            justify-content: space-around;
+            align-items: flex-end;
+        }
+        /* Moving icon to the side */
+        ul :last-child{
+            position: relative;
+            left: 100%;
+            top: 1rem;
+            top: -3rem;
+            z-index: 1;
+        }
+        
+        #description-middle-parent{
+            position: relative;
+            top: 1rem;
+            left: 20%;
+            width: 130%;
+            font-size: 1em;
+        }
         #div-cards-parent{
             display: grid;
             grid-template-columns: repeat(1,auto);
-            top: 1rem;
-            left: 36%;
+            top: 2rem;
+            left: 60%;
         }
         .div-cards{
             margin: 1rem;
-            width: 50rem;
-            height: 20rem;
+            width: 22rem;
+            height: 13rem;
+            font-size: 1.5em;
         }
-        #div-navbar-parent ul{
-            display: block;
-        }
-        .box::before{
-            background-repeat:no-repeat;
-        }
-    
-    } */
+    }
